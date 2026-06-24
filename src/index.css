@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 72 100% 50%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 16 100% 50%;
+    --radius: 0px;
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-[#0D0D0D] text-[#F4F4F4];
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .text-molten {
+    color: #FF4500;
+  }
+
+  .text-acid {
+    color: #D4FF00;
+  }
+
+  .bg-charcoal {
+    background-color: #1E1E1E;
+  }
+
+  .bg-jet {
+    background-color: #0D0D0D;
+  }
+
+  .border-industrial {
+    border-color: #5C5C5C;
+  }
+
+  .btn-molten {
+    @apply bg-[#FF4500] text-white px-8 py-4 font-display text-sm tracking-widest uppercase transition-all duration-300;
+  }
+
+  .btn-molten:hover {
+    @apply bg-[#D4FF00] text-[#0D0D0D];
+  }
+
+  .hero-scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.15) 2px,
+      rgba(0,0,0,0.15) 4px
+    );
+    pointer-events: none;
+  }
+
+  .char {
+    display: inline-block;
+    will-change: transform;
+  }
+
+  .spacer {
+    display: inline-block;
+    width: 0.3em;
+  }
+
+  .line {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  .burst-char {
+    display: inline-block;
+    will-change: transform, opacity;
+    transform-origin: center center;
+  }
+
+  .reveal-container {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    line-height: 1;
+    padding: 10px 0;
+  }
+
+  .inertial-item {
+    will-change: transform;
+  }
+}
+
+@layer utilities {
+  .tracking-tighter-custom {
+    letter-spacing: -0.04em;
+  }
+
+  .leading-tight-custom {
+    line-height: 0.85;
+  }
+}
