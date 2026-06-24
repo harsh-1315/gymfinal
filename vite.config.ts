@@ -1,12 +1,11 @@
 import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
-import { inspectAttr } from 'kimi-plugin-inspect-react'
-import glsl from 'vite-plugin-glsl'
+import glsl from "vite-plugin-glsl"
 
 export default defineConfig({
-  base: './',
-  plugins: [inspectAttr(), react(), glsl()],
+  base: "./",
+  plugins: [react(), glsl()],
   server: {
     port: 3000,
   },
